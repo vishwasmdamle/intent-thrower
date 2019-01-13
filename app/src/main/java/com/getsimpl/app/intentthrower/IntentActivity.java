@@ -13,7 +13,9 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class IntentActivity extends AppCompatActivity {
 
@@ -47,7 +49,11 @@ public class IntentActivity extends AppCompatActivity {
 
     // TODO: Display logic needs to be cleaner
     private String getResultCode(int resultCode) {
-        return String.format("<b>Result Code:</b> %s</br>", resultCode);
+        Map<Integer, String> resultCodes = new HashMap<>();
+        resultCodes.put(AppCompatActivity.RESULT_CANCELED, "RESULT_CANCELED");
+        resultCodes.put(AppCompatActivity.RESULT_OK, "RESULT_OK");
+        resultCodes.put(AppCompatActivity.RESULT_FIRST_USER, "RESULT_FIRST_USER");
+        return String.format("<b>Result Code:</b> %s</br>", resultCodes.get(resultCode));
     }
 
     @NonNull
