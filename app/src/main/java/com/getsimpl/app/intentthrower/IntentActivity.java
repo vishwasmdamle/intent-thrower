@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
@@ -41,6 +42,7 @@ public class IntentActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         ((TextView) findViewById(R.id.activityResultCode)).setText(Html.fromHtml(getResultCode(resultCode)));
         ((TextView) findViewById(R.id.activityResultData)).setText(Html.fromHtml(getResultData(data)));
+        ((TextView) findViewById(R.id.activityResultData)).setMovementMethod(new ScrollingMovementMethod());
     }
 
     // TODO: Display logic needs to be cleaner

@@ -36,6 +36,7 @@
         android:id="@+id/activityResultData"
         android:layout_width="match_parent"
         android:paddingHorizontal="10dp"
-        android:layout_height="wrap_content" />
+        android:scrollbars="vertical"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
