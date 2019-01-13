@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.getsimpl.app.intentthrower.IntentActivity">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/intentAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="com.google.zxing.client.android.SCAN"
+        android:hint="Intent action, like com.google.zxing.client.android.SCAN" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onStartClicked"
+        android:text="Trigger Intent" />
+
+    <TextView
+        android:id="@+id/exceptionText"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="10dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorErrorRed" />
+
+    <TextView
+        android:id="@+id/activityResultCode"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/activityResultData"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="10dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
