@@ -10,7 +10,6 @@
         android:id="@+id/intentAction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="com.google.zxing.client.android.SCAN"
         android:hint="Intent action, like com.google.zxing.client.android.SCAN" />
 
     <android.support.v7.widget.AppCompatButton

@@ -27,6 +27,9 @@ public class IntentActivity extends AppCompatActivity {
     }
 
     public void onStartClicked(View view) {
+        ((TextView) findViewById(R.id.activityResultCode)).setText("");
+        ((TextView) findViewById(R.id.activityResultData)).setText("");
+        ((TextView) findViewById(R.id.exceptionText)).setText("");
         startIntent();
     }
 
